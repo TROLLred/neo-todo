@@ -6,6 +6,7 @@ import tsconfigPath from 'vite-tsconfig-paths';
 // https://vite.dev/config/
 export default defineConfig({
 	plugins: [react(), tsconfigPath(), tailwindcss()],
+	base: '/neo-todo/',
 	build: {
 		outDir: 'build',
 		emptyOutDir: true,
