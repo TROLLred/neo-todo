@@ -1,0 +1,31 @@
+:root {
+	/* Backgrounds */
+	--base: #eff1f5;
+	--base-15: #eff1f526;
+	--base-25: #eff1f540;
+	--mantle: #e6e9ef;
+	--mantle-15: #e6e9ef26;
+	--mantle-25: #e6e9ef40;
+	--crust: #dce0e8;
+	--crust-15: #dce0e826;
+	--crust-25: #dce0e840;
+
+	--surface-0: #ccd0da;
+	--surface-1: #bcc0cc;
+	--surface-2: #acb0be;
+	--surface-2-25: #acb0be40;
+
+	--overlay-0: #9ca0b0;
+	--overlay-1: #8c8fa1;
+	--overlay-2: #7c7f93;
+
+	/* Text Colors */
+	--text: #4c4f69;
+	--text-15: #4c4f6926;
+
+	--subtext-0: #6c6f85;
+	--subtext-1: #5c5f77;
+
+	--mauve: #8839ef;
+	--primary: var(--mauve);
+}

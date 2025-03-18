@@ -1,0 +1,31 @@
+[data-theme='dark']:root {
+	/* Backgrounds */
+	--base: #1e1e2e;
+	--base-15: #1e1e2e26;
+	--base-25: #1e1e2e40;
+	--mantle: #181825;
+	--mantle-15: #18182526;
+	--mantle-25: #18182540;
+	--crust: #11111b;
+	--crust-15: #11111b26;
+	--crust-25: #11111b40;
+
+	--surface-0: #313244;
+	--surface-1: #45475a;
+	--surface-2: #585b70;
+	--surface-2-25: #585b7040;
+
+	--overlay-0: #6c7086;
+	--overlay-1: #7f849c;
+	--overlay-2: #9399b2;
+
+	/* Text Colors */
+	--text: #cdd6f4;
+	--text-15: #cdd6f426;
+
+	--subtext-0: #a6adc8;
+	--subtext-1: #bac2de;
+
+	--mauve: #cba6f7;
+	--primary: var(--mauve);
+}

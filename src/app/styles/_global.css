@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-*: initial;
+	--shadow-*: initial;
+
+	/* Backgrounds */
+	--color-base: var(--base);
+	--color-base-15: var(--base-15);
+	--color-base-25: var(--base-25);
+	--color-mantle: var(--mantle);
+	--color-mantle-15: var(--mantle-15);
+	--color-mantle-25: var(--mantle-25);
+	--color-crust: var(--crust);
+	--color-crust-15: var(--crust-15);
+	--color-crust-25: var(--crust-25);
+
+	--color-surface-0: var(--surface-0);
+	--color-surface-1: var(--surface-1);
+	--color-surface-2: var(--surface-2);
+	--color-surface-2-25: var(--surface-2-25);
+
+	--color-overlay-0: var(--overlay-0);
+	--color-overlay-1: var(--overlay-1);
+	--color-overlay-2: var(--overlay-2);
+
+	/* Text Colors */
+	--color-text: var(--text);
+
+	--color-subtext-0: var(--subtext-0);
+	--color-subtext-1: var(--subtext-1);
+
+	--color-primary: var(--primary);
+	--color-error: var(--error);
+
+	/* Shadows */
+	--shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	--shadow-inset: inset 0 0px 4px 2px rgba(0, 0, 0, 0.25);
+
+	/* Fonts */
+	--font-*: initial;
+	--font-sans: 'Roboto Mono', ui-sans-serif, system-ui, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-serif: 'Roboto Mono', ui-serif, Georgia, Cambria, 'Times New Roman',
+		Times, serif;
+	--font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+		Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+	/* Varibales */
+	--breakpoint-xs: 23.5rem;
+	--main-height: calc(100dvh - 68px);
+}
+
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--primary-blue, currentColor);
+	}
+
+	body {
+		position: relative;
+		font-family: 'Roboto Mono', serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		color: var(--text);
+		max-height: 100dvh;
+		overflow: hidden;
+		background: var(--mantle);
+	}
+
+	*::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+
+	*::-webkit-scrollbar-track {
+		background: var(--mantle);
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background: var(--text);
+		border-radius: 6px;
+		border: 3px solid var(--mantle);
+	}
+
+	*::-webkit-scrollbar-corner {
+		background: var(--text);
+	}
+
+	/*
+	body::before {
+		content: '';
+		position: fixed;
+		inset: 0;
+		background: linear-gradient(
+			to bottom,
+			rgba(30, 30, 46, 0) 50%,
+			rgba(49, 50, 68, 0.25) 50%
+		);
+		background-size: 100% 8px;
+		z-index: 101;
+		pointer-events: none;
+	}
+
+	body::after {
+		content: '';
+		position: fixed;
+		inset: 0;
+		background: url('https://cliply.co/wp-content/uploads/2021/07/402107790_STATIC_NOISE_400.gif')
+			repeat;
+		mix-blend-mode: screen;
+		z-index: 101;
+		pointer-events: none;
+		opacity: 0.1;
+	}*/
+
+	#root {
+		height: 100dvh;
+		display: grid;
+		gap: 12px;
+		grid-template-rows: 1fr auto;
+	}
+}
+
+@layer components {
+	.glass {
+		background: var(--text-15);
+		border: 1px solid var(--text-15);
+		backdrop-filter: blur(4px);
+		box-shadow: 0 0 32px var(--text-15);
+	}
+
+	/*.perlinNoiseBg {
+		display: flex;
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+	}
+
+	.perlinNoiseBg > canvas {
+		display: flex;
+		max-width: 100%;
+		max-height: 100vh;
+	}*/
+
+	/*.scanline {
+		width: 100%;
+		height: 100px;
+		z-index: 100;
+		background: linear-gradient(
+			0deg,
+			rgba(30, 30, 46, 0) 0%,
+			rgba(205, 214, 244, 0.2) 10%,
+			rgba(49, 50, 68, 0.1) 100%
+		);
+		opacity: 0.15;
+		position: fixed;
+
+		bottom: calc(100dvh + 100px);
+		pointer-events: none;
+		animation: scanline;
+		animation-delay: 3s;
+		animation-play-state: running;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-duration: 3s;
+	}
+
+	@keyframes scanline {
+		0% {
+			bottom: calc(100dvh + 100px);
+		}
+		60% {
+			bottom: calc(100dvh + 100px);
+		}
+		100% {
+			bottom: 0%;
+		}
+	}*/
+}
